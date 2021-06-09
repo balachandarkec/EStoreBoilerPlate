@@ -5,19 +5,30 @@ public class Product {
 	private String productName;
 	private int quantity;
 	private double price;
+	private boolean isactive;
 	
 	
 	public Product() {
 		
 	}
-	
-	public Product(int produtId, String productName, int quantity, double price) {
+
+	public Product(int produtId, String productName, int quantity, double price, boolean isactive) {
 		super();
 		this.produtId = produtId;
 		this.productName = productName;
 		this.quantity = quantity;
 		this.price = price;
+		this.isactive = isactive;
 	}
+
+	public boolean isIsactive() {
+		return isactive;
+	}
+
+	public void setIsactive(boolean isactive) {
+		this.isactive = isactive;
+	}
+
 	public int getProdutId() {
 		return produtId;
 	}
@@ -46,7 +57,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [produtId=" + produtId + ", productName=" + productName + ", quantity=" + quantity + ", price="
-				+ price + "]";
+				+ price + ", isactive=" + isactive + "]";
 	}
 
 	// 
